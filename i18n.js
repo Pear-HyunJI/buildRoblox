@@ -24,7 +24,7 @@ let loadTranslation = async () => {
   for (let lang of languages) {
     for (let fileName of fileNames) {
       await axios
-        .get(`./locales/${lang}/${fileName}.json`)
+        .get(`./assets/locales/${lang}/${fileName}.json`)
         .then((res) => {
           if (lang === "ko") {
             messages.ko.push(res.data);
